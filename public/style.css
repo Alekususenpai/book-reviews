@@ -1,0 +1,165 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.nav {
+  background-color: #136c72;
+  padding: 1em 0;
+}
+
+footer {
+  background-color: #136c72;
+  text-align: center;
+  color: white;
+  margin-top: auto;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 1em;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.signup {
+  background-color: white;
+  color: #23424a;
+  border-radius: 1em;
+  padding: 0.2em 0.8em;
+  align-self: flex-end;
+}
+
+.container {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero {
+  padding: 100px 0;
+  background-color: #23424a;
+  color: #fff;
+}
+
+.hero__h1 {
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+.hero__text {
+  width: 60%;
+}
+
+.hero__p {
+  margin-bottom: 3rem;
+}
+
+.hero__img {
+  width: 35%;
+  align-self: flex-start;
+}
+
+.hero__img img {
+  max-width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #23424a;
+  font-weight: 900;
+  background-color: #38cfd9;
+  padding: 0.75em 2em;
+  border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: 0.75;
+}
+
+.second-section {
+  margin: 3rem 0;
+}
+
+.cards-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 45%;
+  margin: 2em 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 1em 2em;
+  text-align: left;
+  border-radius: 2em;
+  background-color: #136c72;
+  color: white;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.row input[type="text"],
+textarea {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  resize: vertical;
+  outline: thistle;
+}
+
+.row label {
+  padding: 1em 1em 1em 0;
+  display: block;
+}
+
+.row input[type="submit"] {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #23424a;
+  font-weight: 900;
+  background-color: #38cfd9;
+  padding: 0.75em 2em;
+  border-radius: 2em;
+  border: 1px solid #38cfd9;
+}
