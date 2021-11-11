@@ -10,6 +10,7 @@ connectToDB();
 const fs = require('fs');
 const path = require('path');
 const methodOverride = require('method-override');
+const morgan = require('morgan');
 
 
 app.set('view engine', 'ejs');
@@ -19,6 +20,7 @@ app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
+app.use(morgan('tiny'));
 //const { v4: uuid } = require('uuid');//
 
 
@@ -73,6 +75,10 @@ app.get('/about', (req, res) => {
           res.render('about')
 })
 
+
+app.use((req, res) => {
+          res.render('404')
+})
 
 app.listen(3000, () => {
           console.log('Listening on port 3000')
