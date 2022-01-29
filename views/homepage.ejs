@@ -1,16 +1,13 @@
-<%- include ('partials/header') %>
-
-    <div class="hero">
-        <div class="container">
-            <div class="hero__text">
+<div class="background">
+    <%- include ('partials/header') %>
+        <video id="background-video" poster="./video-preview.png" src="./Library.mp4" type="video/mp4" autoplay muted loop>
+        </video>
+        <div class="hero_landing">
+            <div class="hero__text_landing">
                 <h1 class="hero__h1">WELCOME TO BOOK REVIEWS!</h1>
                 <p class="hero__p">“Today a reader, tomorrow a leader.” – Margaret Fuller</p>
                 <a href="/reviews" class="btn"> Meet your next favourite book!</a>
             </div>
-            <div class="hero__img">
-                <img src="./hero-img.jpg" alt="">
-            </div>
         </div>
-    </div>
-
-    <%- include ('partials/footer') %>
+        <%- include ('partials/footer') %>
+</div>
