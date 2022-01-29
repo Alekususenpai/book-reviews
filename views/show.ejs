@@ -1,22 +1,30 @@
 <%- include ('partials/header') %>
 
           <div class="hero">
-                    <div class="container">
-                              <div class="hero__text">
-                                        <h2>
+                    <div>
+                              <div class="hero__text_show">
+                                        <h2 class="card__author">
                                                   Author: <%= review.author %>
                                         </h2>
-                                        <h2>
+                                        <h2 class="card__title">
                                                   Title: <%= review.title %>
                                         </h2>
-                                        <h3>
+                                        <h3 class="card__summary">
                                                   Summary: <%= review.summary %>
                                         </h3>
-                              </div><a href="/reviews">Back to all reviews</a>
-                              <a href="/reviews/<%= review._id %>/edit">Edit the review</a>
-                              <form action="/reviews/<%=review._id%>?_method=DELETE" method="POST">
-                                        <button>Delete</button>
-                              </form>
+                              </div>
+                              <div class="container-btn">
+                                        <div class="button-div">
+                                                  <a class="btn1" href="/reviews">Back to all reviews</a>
+                                                  <a class="btn1" href="/reviews/<%= review._id %>/edit">Edit the
+                                                            review</a>
+                                        </div>
+                                        <div class="button-div-self">
+                                                  <form action="/reviews/<%=review._id%>?_method=DELETE" method="POST">
+                                                            <button class="btn2">Delete</button>
+                                                  </form>
+                                        </div>
+                              </div>
                     </div>
 
           </div>
