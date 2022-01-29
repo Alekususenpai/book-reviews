@@ -1,9 +1,11 @@
-const { json } = require('express');
 const express = require('express');
 const app = express();
 
+require('dotenv').config()
 
-const { connectToDB, reviewSchema, Review } = require("./mongodb");
+
+//Database destructure / Connect //
+const { connectToDB, Review } = require("./mongodb");
 connectToDB();
 
 
@@ -13,22 +15,35 @@ const methodOverride = require('method-override');
 const morgan = require('morgan');
 
 
+// Enabling EJS, setting an absolute route //
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'))
 
+
+//Serving static style files//
 app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
-app.use(morgan('tiny'));
-//const { v4: uuid } = require('uuid');//
+app.use(morgan('tiny'));     
 
 
+//In construction//
+const passport = require('passport');
+const localStrategy = require('passport-local');
+
+
+//        //        ROUTES    //        //        // 
 
 app.get('/', (req, res) => {
           res.render('homepage')
 })
 
+app.get('/about', (req, res) => {
+          res.render('about')
+})
 
 
 app.get('/reviews', async (req, res) => {
@@ -46,6 +61,8 @@ app.get('/reviews/:id', async (req, res) => {
 app.get('/addreview', (req, res) => {
           res.render('addreview')
 })
+
+
 
 app.post('/reviews', async (req, res) => {
           const newRev = new Review(req.body);
@@ -71,10 +88,8 @@ app.delete('/reviews/:id', async (req, res) => {
           res.redirect('/reviews')
 });
 
-app.get('/about', (req, res) => {
-          res.render('about')
-})
 
+//Any other route//
 
 app.use((req, res) => {
           res.render('404')
