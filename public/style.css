@@ -63,7 +63,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.411);
+  background-color: rgba(255, 255, 255, 0.705);
 }
 
 #background-video {
@@ -223,6 +223,17 @@ footer {
 }
 
 /* Add a review */
+
+.layer1 {
+  background-color: rgba(243, 240, 236, 0.699);
+}
+
+.add-a-review-bg {
+  background-image: url(./add-a-review-bg.jpg);
+  background-size: cover;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
 
 .form-container {
   width: 80%;
