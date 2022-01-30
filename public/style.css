@@ -28,6 +28,11 @@ body {
   margin: 0 auto;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
 .nav {
   background-color: #136c72;
   padding: 1em 0;
@@ -49,9 +54,8 @@ body {
 .signup {
   background-color: white;
   color: #23424a;
-  border-radius: 1em;
-  padding: 0.2em 0.8em;
-  align-self: flex-end;
+  border-radius: 0.5em;
+  padding: 0.1em 0.7em;
 }
 
 footer {
@@ -107,7 +111,7 @@ footer {
 .btn:hover,
 .btn:focus,
 .nav-item:hover,
-.row input[type="submit"]:hover {
+.row .btn:hover {
   transform: scale(1.05);
 }
 
@@ -225,16 +229,14 @@ footer {
 
 .container-btn .btn {
   display: inline-block;
-  background-color: rgb(37, 34, 34);
-  color: #fff;
-  border-radius: 1em;
-  padding: 0.6em 1.7em;
   letter-spacing: 1px;
   margin: 5px;
 }
 
 .container-btn .delete {
   background-color: rgb(43, 6, 6);
+  color: rgba(255, 255, 255, 0.788);
+  font-size: 0.8rem;
 }
 
 .container-btn .btn1:hover,
@@ -300,17 +302,12 @@ form {
 
 .container-btn-edit .btn {
   display: inline-block;
-  background-color: rgb(2, 70, 2);
-  color: #fff;
-  border-radius: 1em;
-  padding: 0.3em 1.4em;
   letter-spacing: 1px;
   margin: 5px;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
-
-.container-btn-edit .delete {
-  background-color: rgb(37, 34, 34);
+.container-btn-edit .btn:last-child {
+  font-size: 0.8rem;
 }
 
 /* Add a review */
@@ -334,15 +331,9 @@ textarea {
   outline: thistle;
 }
 
-.row input[type="submit"] {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #23424a;
-  font-weight: 900;
-  background-color: #38cfd9;
-  padding: 0.75em 2em;
-  border-radius: 2em;
-  border: 1px solid #38cfd9;
+.row .btn {
+  margin-right: 5px;
+  font-size: 0.8rem;
 }
 
 /*****  About  *****/
@@ -356,6 +347,20 @@ textarea {
   align-items: center;
 }
 
+.hero-about .hero__h1,
+.hero-about .hero__p {
+  padding: 0.6em 0;
+}
+
 .btn.about {
   margin-left: 0;
+}
+
+/*****  404 *****/
+
+.hero_404 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #23424a;
+  color: #fff;
 }
