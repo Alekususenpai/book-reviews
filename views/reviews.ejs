@@ -1,36 +1,36 @@
-<%- include ('partials/header') %>
+<div class="layout">
+          <%- include ('partials/header') %>
 
-
-          <div class="hero">
-                    <div class="container">
-                              <div class="hero__text">
-                                        <h1>BOOK REVIEWS</h1>
-                                        <p>Deciding what to read next? You’re in the right place.</p>
+                    <div class="hero_review">
+                              <div class="container">
+                                        <div class="hero__text">
+                                                  <h1>BOOK REVIEWS</h1>
+                                                  <p>Deciding what to read next? You’re in the right place.</p>
+                                        </div>
                               </div>
                     </div>
-          </div>
 
-          <section class="second-section">
-                    <div class="layer">
-                              <div class="cards-container">
-                                        <% for (let result of results){ %>
-                                                  <section class="card">
-                                                            <h3 class="card__author">
-                                                                      Author: <%=result.author%>
-                                                            </h3>
-                                                            <h3 class="card__title">
-                                                                      Title: <%=result.title%>
-                                                            </h3>
-                                                            <p class="card__summary">
-                                                                      Summary: <%=result.summary%>
-                                                            </p>
-                                                            <a href="reviews/<%= result._id %>"> Read more...</a>
-                                                  </section>
-                                                  <%}%>
+                    <section class="reviews-section">
+                              <div class="layer-reviews">
+                                        <div class="cards-container">
+                                                  <% for (let result of results){ %>
+                                                            <section class="card">
+                                                                      <h3 class="card__author">
+                                                                                Author: <%=result.author%>
+                                                                      </h3>
+                                                                      <h3 class="card__title">
+                                                                                Title: <%=result.title%>
+                                                                      </h3>
+                                                                      <p class="card__summary">
+                                                                                Summary: <%=result.summary%>
+                                                                      </p>
+                                                                      <a href="reviews/<%= result._id %>"> Read
+                                                                                more...</a>
+                                                            </section>
+                                                            <%}%>
+                                        </div>
                               </div>
-                    </div>
-          </section>
+                    </section>
 
-
-
-          <%- include ('partials/footer') %>
+                    <%- include ('partials/footer') %>
+</div>

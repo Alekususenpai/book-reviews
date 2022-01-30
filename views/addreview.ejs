@@ -1,9 +1,10 @@
-<%- include ('partials/header') %>
-          <div class="add-a-review-bg">
-                    <div class="layer1">
-                              <div class="form-container">
+<div class="layout">
+          <%- include ('partials/header') %>
+                    <div class="add-a-review-bg">
+                              <div class="layer1">
                                         <div class="wrapper">
                                                   <form action="/reviews" method="POST">
+                                                            <h2>Add a review</h2>
                                                             <div class="row">
                                                                       <div>
                                                                                 <label for="author">Author</label>
@@ -39,9 +40,10 @@
                                                                       <input type="submit" value="Submit">
                                                             </div>
                                                   </form>
+
                                         </div>
                               </div>
                     </div>
-          </div>
 
-          <%- include ('partials/footer') %>
+                    <%- include ('partials/footer') %>
+</div>
