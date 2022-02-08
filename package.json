@@ -1,4 +1,5 @@
 {
+
   "name": "bookreview",
   "version": "1.0.0",
   "description": "Book review project for Node.js",
@@ -14,6 +15,7 @@
     "dotenv": "^14.3.2",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "gh-pages": "^3.2.3",
     "method-override": "^3.0.0",
     "mongoose": "^6.0.12",
     "morgan": "^1.10.0",
