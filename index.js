@@ -4,7 +4,7 @@ dotenv.config();
 const express = require('express');
 const app = express();
 
-console.log(process.env.DB_URL, process.env.DB_PASSWORD, process.env.DB_USERNAME)
+
 
 //Database destructure / Connect //
 const { connectToDB, Review } = require("./mongodb");
