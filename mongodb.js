@@ -1,13 +1,11 @@
+require('dotenv').config()
 const mongoose = require('mongoose');
-const username = process.env.DB_USERNAME;
-const password = process.env.DB_PASSWORD;
 const dbName = process.env.DB_NAME;
 const dbUrl = process.env.DB_URL;
-const uri = process.env.DB_URL;
 
 function connectToDB() {
     mongoose.connect(
-        uri,
+        dbUrl,
         {
             useNewUrlParser: true,
             useUnifiedTopology: true,
