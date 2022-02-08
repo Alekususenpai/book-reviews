@@ -1,22 +1,20 @@
 const mongoose = require('mongoose');
-const username = process.env.DB_USERNAME;
-const password = process.env.DB_PASSWORD;
-const dbName = process.env.DB_NAME;
-const connectionString = `mongodb+srv://${username}:${password}@cluster0.r9vho.mongodb.net/${dbName}?retryWrites=true&w=majority`
+const dbUrl = process.env.DB_URL;
+
 
 function connectToDB() {
     mongoose.connect(
-        connectionString,
+        dbUrl,
         {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         },
         (err) => {
             if (err) {
-                console.log(`Could not connect to ${dbName}:`, err);
+                console.log(`Could not connect to ${process.env.DB_NAME}:`, err);
                 return;
             }
-            console.log(`Successfully connected to ${dbName}`);
+            console.log(`Successfully connected to ${process.env.DB_NAME}`);
         }
     )
 };
