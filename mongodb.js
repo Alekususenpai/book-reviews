@@ -1,4 +1,3 @@
-require('dotenv').config()
 const mongoose = require('mongoose');
 const dbName = process.env.DB_NAME;
 const dbUrl = process.env.DB_URL;
