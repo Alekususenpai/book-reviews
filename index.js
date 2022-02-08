@@ -96,5 +96,5 @@ app.use((req, res) => {
 })
 
 app.listen(process.env.PORT, () => {
-          console.log(`Listening on ${process.env.HOST}: ${process.env.PORT}!`)
+          console.log(`Listening on: ${process.env.PORT}!`)
 })
