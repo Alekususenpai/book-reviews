@@ -42,10 +42,11 @@ body {
 }
 
 .nav-item {
-  margin-bottom: 0.5em;
+  margin-bottom: 1.2em;
   text-decoration: none;
   color: white;
   text-transform: uppercase;
+  font-size: 1rem;
 }
 
 .navbar {
@@ -67,6 +68,10 @@ body {
   color: #23424a;
   border-radius: 0.5em;
   padding: 0.1em 0.7em;
+}
+
+.social-media .fa {
+  margin-right: 0.4em;
 }
 
 footer {
@@ -404,7 +409,7 @@ textarea {
   }
 
   .nav-item {
-    margin-right: 10px;
+    margin-right: 15px;
     margin-bottom: 0;
   }
 
